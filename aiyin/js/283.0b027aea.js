@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkaiyin"]=self["webpackChunkaiyin"]||[]).push([[283],{1283:function(n,t,a){a.r(t),a.d(t,{default:function(){return d}});var e=a(3396);const r={class:"container"};function i(n,t,a,i,c,s){return(0,e.wg)(),(0,e.iD)("div",r," ...................敬请期待................... ")}var c={name:"latestActivity",data(){return{}},methods:{}},s=a(89);const u=(0,s.Z)(c,[["render",i],["__scopeId","data-v-17119060"]]);var d=u}}]);
+//# sourceMappingURL=283.0b027aea.js.map
