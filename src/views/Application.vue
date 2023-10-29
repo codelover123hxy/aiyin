@@ -14,7 +14,7 @@
             <div class="do">
                 2.想为爱因社做些什么
                 <textarea name="" id="" cols="30" rows="10"
-                    
+
                 ></textarea>
             </div>
             <div style="margin-top: 20px;text-align: left;">
@@ -24,54 +24,54 @@
                 <input type="checkbox" name="activity" :value="3" v-model="checkedItems">知识竞赛
                 <input type="checkbox" name="activity" :value="4" v-model="checkedItems" >其他
                 <input v-if="isShowOthers" type="text" style="display:inline-flex" class="others">
-                
+
             </div>
-            
+
             <Button :name="'提交'" :background-color="'rgb(23,145,255)'" :color="'white'"
             style="margin-top: 30px;" @click="submit"
             ></Button>
         </form>
-        
-        
+
+
     </div>
 </template>
 
 <script>
-    import Button from '@/components/Button.vue'
-    export default{
-        name:'applicationIndex',
-        data(){
-            return{
-                isShowOthers:false,
-                checkedItems:[],
-               
-            }
-        },
-        components:{
-            Button
-        },
-        methods:{
-            submit(){
-                // console.log(formData)
-            }
-        },
-        watch:{
-            checkedItems(newValue,){
-                console.log(newValue)
-                if (newValue.includes(4)){
-                    // console.log(true)
-                    this.isShowOthers = true
-                }
-                else{
-                    this.isShowOthers = false
-                }
-            }
-        }
-    }
+import Button from "@/components/Button.vue"
+export default{
+	name:"applicationIndex",
+	data(){
+		return{
+			isShowOthers:false,
+			checkedItems:[],
+
+		}
+	},
+	components:{
+		Button
+	},
+	methods:{
+		submit(){
+			// console.log(formData)
+		}
+	},
+	watch:{
+		checkedItems(newValue,){
+			console.log(newValue)
+			if (newValue.includes(4)){
+				// console.log(true)
+				this.isShowOthers = true
+			}
+			else{
+				this.isShowOthers = false
+			}
+		}
+	}
+}
 </script>
 
 <style scoped lang="less">
-    .container{ 
+    .container{
         display: block;
         width:50%;
         padding: 10px;
@@ -96,7 +96,7 @@
         }
     }
 
-    
+
     .others{
         width:100px;
     }
@@ -104,5 +104,5 @@
             outline: none;
         }
 
-    
+
 </style>

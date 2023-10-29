@@ -2,10 +2,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="sidebar">
-        <template v-for="(item,index) in list" :key="index">      
+        <template v-for="(item,index) in list" :key="index">
             <router-link class="choice-item"
                 :to="rootUrl + '/' + item.url"
-            >{{ item.title }}</router-link>            
+            >{{ item.title }}</router-link>
         </template>
         <div class="triangle1"></div>
         <div class="triangle2"></div>
@@ -13,20 +13,20 @@
 </template>
 
 <script>
-    export default{
-        props:{
-            list:Array,
-            rootUrl:String
-        },
-        data(){
-            return{
-                
-            }
-        },
-        methods:{
-            
-        }
-    }
+export default{
+	props:{
+		list:Array,
+		rootUrl:String
+	},
+	data(){
+		return{
+
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
@@ -74,6 +74,6 @@
         border-left-color: rgb(33, 111, 135);
         border-bottom-color: rgb(33, 111, 135);
     }
-    
-    
+
+
 </style>

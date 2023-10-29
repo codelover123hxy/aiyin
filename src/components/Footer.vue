@@ -13,25 +13,26 @@
 </template>
 
 <script>
-    export default{
-        data(){
-            return{
-                
-            }
-        },
-        methods:{
-            
-        }
-    }
+export default{
+	data(){
+		return{
+
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
     .container{
         padding: 30px;
         margin:0;
+        position: relative;
         background-color:rgb(244, 244, 244);
     }
-    .footer{        
+    .footer{
         span{
             font-weight: 700;
             display:block;

@@ -3,7 +3,7 @@
         <div>2022-2023</div>
         <div class="lecture">精彩讲座</div>
         <img src="@/assets/calendar.png" alt="" width="500">
-        <div class="moment">美妙瞬间</div> 
+        <div class="moment">美妙瞬间</div>
         <div style="display: flex;justify-content: space-evenly;">
           <img src="@/assets/moment1.png" alt="" height="400">
           <img src="@/assets/moment2.png" alt="" height="400">
@@ -12,20 +12,20 @@
 </template>
 
 <script>
-    export default{
-        name:'previousActivity',
-        data(){
-            return{
-            }
-        },
-        methods:{
-            
-        }
-    }
+export default{
+	name:"previousActivity",
+	data(){
+		return{
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
-    .container{ 
+    .container{
         display: block;
         width:50%;
         padding: 20px;

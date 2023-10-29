@@ -6,24 +6,24 @@
 </template>
 
 <script>
-    export default{
-        props:{
-            name:String,
-            color:String,
-            backgroundColor:String
-        },
-        data(){
-            return{
+export default{
+	props:{
+		name:String,
+		color:String,
+		backgroundColor:String
+	},
+	data(){
+		return{
 
-            }
-        },
-        methods:{
-            
-        }
-    }
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
-<style scoped>  
+<style scoped>
     .btn{
         width:80px;
         height:40px;

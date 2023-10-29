@@ -1,9 +1,12 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-// 插件安装
-Vue.use(Vuex)
+
+import {createStore} from "vuex"
+import {page} from "@/store/modules/page"
 
 // 创建仓库
-const store = new Vuex.Store()
+const store = createStore({
+	modules: {
+		page: page
+	}
+})
 
 export default store

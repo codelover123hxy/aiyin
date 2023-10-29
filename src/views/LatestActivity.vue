@@ -5,21 +5,21 @@
 </template>
 
 <script>
-    export default{
-        name:'latestActivity',
-        data(){
-            return{
+export default{
+	name:"latestActivity",
+	data(){
+		return{
 
-            }
-        },
-        methods:{
-            
-        }
-    }
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
-    .container{ 
+    .container{
         display: block;
         width:50%;
         padding: 20px;
