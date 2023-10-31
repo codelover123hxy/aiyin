@@ -1,27 +1,11 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-<!--    <div class="container" >-->
-<!--        <div @click="goHome" class="aiyin-logo">-->
-<!--            <img src="../assets/aiyin-logo.png" alt="aiyin" height="60">-->
-<!--            <h1 class="title">爱 因 社</h1>-->
-<!--            <div class="slogan">-->
-<!--                <h5>-->
-<!--                    爱因挠头方知果-->
-<!--                </h5>-->
-<!--                <h5 style="margin-top:-10px">-->
-<!--                    思坦论之果成因-->
-<!--                </h5>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <NavBar></NavBar>-->
-<!--    </div>-->
   <div :class="pageType" class="base">
-    <img class="logo" src="../assets/aiyin-logo.png" :class="[pageType]" alt="aiyin" @click="goHome()" />
+    <img :class="[pageType]" alt="aiyin" class="logo" src="../assets/aiyin-logo.png" @click="goHome()"/>
     <div v-if="pageType==='normal'">
       <h1>爱 因 社</h1>
     </div>
     <div v-if="pageType==='normal'">
-      <div >
+      <div>
         <h5>
           爱因挠头方知果
         </h5>
@@ -30,18 +14,18 @@
         </h5>
       </div>
     </div>
-    <div v-for="(l, index) in links" class="link" :class="index === pageNow ? 'select' : 'notSelect'"
-         v-show="pageType === 'normal'">
+    <div v-for="(l, index) in links" v-show="pageType === 'normal'" :class="index === pageNow ? 'select' : 'notSelect'"
+         class="link">
       <div style="width: 100%;">
-        <router-link style="display: block" :to="l.link">{{ l.name+"\n"}}</router-link>
-        <router-link  :to="l.link">{{ l.details }}</router-link>
+        <router-link :to="l.link" style="display: block">{{ l.name + "\n" }}</router-link>
+        <router-link :to="l.link">{{ l.details }}</router-link>
       </div>
     </div>
-    <div class="listButton" :class="btnOn ? 'btnOn' : 'btnOff'"
-         v-show="pageType === 'mini' || pageType === 'middle'" @click="listBtnClicked"></div>
+    <div v-show="pageType === 'mini' || pageType === 'middle'" :class="btnOn ? 'btnOn' : 'btnOff'"
+         class="listButton" @click="listBtnClicked"></div>
   </div>
-  <div class="list" :class="pageType" v-show="listShow">
-    <div v-for="(l, index) in links" class="listItem" :class="index === pageNow ? 'select' : 'notSelect'"
+  <div v-show="listShow" :class="pageType" class="list">
+    <div v-for="(l, index) in links" :class="index === pageNow ? 'select' : 'notSelect'" class="listItem"
          @click="listBtnClicked">
       <router-link :to="l.link">
         <div style="width: 100%;">
@@ -54,26 +38,25 @@
 
 <script setup>
 // import Button from '@/components/Button.vue'
-import NavBar from "@/components/NavBar.vue"
 import store from "@/store"
-import SideBar from "@/components/SideBar"
 import {computed, onMounted, ref} from "vue"
 import router from "@/router"
+
 const links = [
-	{ name: "首页",details:"Review of work contents", link: "/home" },
-	{ name: "社团介绍",details:"Introduction of aiyin club", link: "/intro/club" },
-	{ name: "活动新闻",details:"News of aiyin club events",  link: "/feature/latest" },
-	{ name: "社团成果",details:"Achievements of aiyin club", link: "/achievement" },
-	{ name: "加入我们",details:"Join us aiyin club", link: "/join/advertise" },
+	{name: "首页", details: "Review of work contents", link: "/home"},
+	{name: "社团介绍", details: "Introduction of aiyin club", link: "/intro/club"},
+	{name: "活动新闻", details: "News of aiyin club events", link: "/feature/latest"},
+	{name: "社团成果", details: "Achievements of aiyin club", link: "/achievement"},
+	{name: "加入我们", details: "Join us aiyin club", link: "/join/advertise"},
 ]
 const pageType = computed(() => store.state.page.pageType)
 const pageNow = computed(() => store.getters.getNowPage)
 const btnOn = ref(true)
 const listShow = ref(false)
 
-function goHome(){
+function goHome() {
 	router.push({
-		path:"/home"
+		path: "/home"
 	})
 }
 
@@ -90,10 +73,11 @@ async function handleResize() {
 		document.querySelector("body")?.setAttribute("style", "min-width: 320px")
 	}
 }
+
 function listBtnClicked() {
 	btnOn.value = !btnOn.value
 	listShow.value = !listShow.value
-	console.log("当前页面"+pageNow.value)
+	console.log("当前页面" + pageNow.value)
 }
 
 onMounted(async () => {
@@ -115,7 +99,7 @@ a {
   z-index: 10;
   display: grid;
   width: 100%;
-  background-image: linear-gradient(rgb(244, 244, 244),rgb(79, 206, 238));
+  background-image: linear-gradient(rgb(244, 244, 244), rgb(79, 206, 238));
   position: relative;
   align-items: center;
 }
@@ -135,7 +119,7 @@ a {
   grid-template-columns: 1fr 60px;
 }
 
-.logo.normal  {
+.logo.normal {
   position: relative;
   left: 50px;
   width: 90px;

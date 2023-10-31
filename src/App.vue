@@ -8,6 +8,7 @@
 // import NavBar from '@/components/NavBar.vue'
 import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
+import store from "@/store"
 
 export default {
 	name: "App",
@@ -16,25 +17,25 @@ export default {
 		Header,
 		Footer
 	},
-	// methods: {
-	// 	handleResize() {
-	// 		let width = document.documentElement.clientWidth
-	// 		if (width >= 1024) {
-	// 			store.commit("setPageType", "normal")
-	// 			document.querySelector("body")?.setAttribute("style", "min-width: 1440px")
-	// 		} else if (width >= 768) {
-	// 			store.commit("setPageType", "middle")
-	// 			document.querySelector("body")?.setAttribute("style", "min-width: 420px")
-	// 		} else {
-	// 			store.commit("setPageType", "mini")
-	// 			document.querySelector("body")?.setAttribute("style", "min-width: 320px")
-	// 		}
-	// 	}
-	// },
-	// mounted() {
-	// 	this.handleResize()
-	// 	window.addEventListener("resize", this.handleResize)
-	// }
+	methods: {
+		handleResize() {
+			let width = document.documentElement.clientWidth
+			if (width >= 1024) {
+				store.commit("setPageType", "normal")
+				document.querySelector("body")?.setAttribute("style", "min-width: 1440px")
+			} else if (width >= 768) {
+				store.commit("setPageType", "middle")
+				document.querySelector("body")?.setAttribute("style", "min-width: 420px")
+			} else {
+				store.commit("setPageType", "mini")
+				document.querySelector("body")?.setAttribute("style", "min-width: 320px")
+			}
+		}
+	},
+	mounted() {
+		this.handleResize()
+		window.addEventListener("resize", this.handleResize)
+	}
 }
 </script>
 

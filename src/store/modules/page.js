@@ -1,4 +1,4 @@
-export const  page = {
+export const page = {
 	state: () => ({
 		pageType: "normal",
 		nowPage: 0,
@@ -13,6 +13,7 @@ export const  page = {
 	},
 	mutations: {
 		setPageType(state, type) {
+			// console.log("setPageType", type)
 			state.pageType = type
 		},
 		setNowPage(state, page) {
