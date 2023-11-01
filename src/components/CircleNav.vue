@@ -7,22 +7,22 @@
 </template>
 
 <script>
-    export default{
-        data(){
-            return{
+export default{
+	data(){
+		return{
 
-            }
-        },
-        props:{
-            radius:String,
-            color:String,
-            chineseText:String,
-            englishText:String
-        },
-        methods:{
-            
-        }
-    }
+		}
+	},
+	props:{
+		radius:String,
+		color:String,
+		chineseText:String,
+		englishText:String
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
@@ -38,9 +38,9 @@
         box-sizing: border-box;
         h6{
             position: absolute;
-         
+
             top:v-bind("(radius*0.3 - 25) + 'px'");
-            font-size:9px;            
+            font-size:9px;
             word-wrap: break-word;
             flex-wrap: wrap;
             font-weight: normal;

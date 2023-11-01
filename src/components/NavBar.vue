@@ -25,16 +25,16 @@
 </template>
 
 <script>
-    export default{
-        data(){
-            return{
+export default{
+	data(){
+		return{
 
-            }
-        },
-        methods:{
-            
-        }
-    }
+		}
+	},
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
@@ -71,5 +71,5 @@
         font-size:20px;
         color:rgb(0, 0, 0);
     }
-    
+
 </style>

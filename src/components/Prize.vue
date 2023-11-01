@@ -5,41 +5,41 @@
             <div class="words">{{ num }}<span class="item">项</span></div>
         </div>
         <div class="prize-name">{{ name }}</div>
-        
 
 
 
-        
+
+
     </div>
 </template>
 
 <script>
-    export default{
-        name:'prizeIndex',
-        props:{
-            num:Number,
-            icon:String,
-            color:String,
-            name:String
-        },
-        data(){
-            return{
+export default{
+	name:"prizeIndex",
+	props:{
+		num:Number,
+		icon:String,
+		color:String,
+		name:String
+	},
+	data(){
+		return{
 
-            }
-        },
-     
-        methods:{
-            
-        }
-    }
+		}
+	},
+
+	methods:{
+
+	}
+}
 </script>
 
 <style scoped lang="less">
     .content{
         width:0px;
     }
-        
-   
+
+
     .words{
         position: absolute;
         left:70px;
@@ -59,10 +59,10 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        border:10px solid v-bind(color);  
+        border:10px solid v-bind(color);
         background-size:60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
     }
     .circle:after{
         display: block;
@@ -72,7 +72,7 @@
         height:50px;
         top:10px;
         left:70px;
-        background-color:v-bind(color);       
+        background-color:v-bind(color);
     }
     .circle:before{
         position:absolute;
@@ -87,5 +87,5 @@
     .prize-name{
         width:max-content;
         color:v-bind(color)
-    }   
+    }
 </style>
