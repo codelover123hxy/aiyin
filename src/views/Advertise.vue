@@ -38,10 +38,9 @@ export default {
 // }
 .container {
   position: relative;
-  left: -3%;
   display: block;
   width: 50%;
-  padding: 20px;
+  padding: 10px;
 }
 
 </style>

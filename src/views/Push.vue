@@ -80,7 +80,7 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 50%;
   padding: 20px;
 }
 
